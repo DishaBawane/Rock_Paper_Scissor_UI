@@ -96,6 +96,20 @@ h3{
     height: 80px;
   }
 
+
+  .game_playbutton .reset_button{
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background: var(--primary);
+    border-radius: 10px;
+    border: 2px var(--primary);
+    cursor: pointer;
+    color: var(--secondary);
+    font-size:30px;
+    width:222px;
+    height: 80px;
+  }
+
 .msg{
 
     font-size: 48px;
