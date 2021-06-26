@@ -1,9 +1,3 @@
-// 1) *Show things when user open the page
-// 2) disable Rock, Paper, Scissor button until user click on play button
-// 3) When user click on play button, enable the rock, papper, scissor buttons
-// 4) You can select computer's item on the same click
-// 5) once user select something, match and show the result
-
 let userScore = 0;
 let computerScore = 0;
 let elements =['rock','paper','scissor'];
@@ -70,13 +64,14 @@ playBtn.addEventListener('click',() => {
 
 rockChoice.addEventListener('click',()=>{
     userSelected = 0;
-    compareResult();
+    compareResult(); 
+   
   });
   
   paperChoice.addEventListener('click',()=>{
     userSelected = 1;
     compareResult();
-
+   
   });
   
   scissorChoice.addEventListener('click',()=>{
@@ -96,13 +91,13 @@ const compareResult = ()=>{
     if (userSelected === computerSelected){
         msgResult.textContent = message.tie;
     }else if(userSelected === 0 && computerSelected ===1){
-        computerScor += 1;
+        computerScore += 1;
         msgResult.textContent = message.computerwin;
     }else if(userSelected === 1 && computerSelected ===0){
         userScore += 1;
         msgResult.textContent = message.userwin;
     }else if(userSelected === 1 && computerSelected ===2 ){
-        computerScor += 1;
+        computerScore += 1;
         msgResult.textContent = message.computerwin;
     }else if(userSelected === 2 && computerSelected ===1 ){
         userScore += 1;
@@ -111,16 +106,16 @@ const compareResult = ()=>{
         userScore += 1;
         msgResult.textContent = message.userwin;
     }else if(userSelected === 2 && computerSelected === 0 ){
-        computerScor += 1;
+        computerScore += 1;
         msgResult.textContent = message.computerwin;
     }
 
-    playBtn.style.display = 'block';
-    resetBtn.style.display = 'none';
+   
     selectUserScore.textContent = userScore;
     selectComputerScore.textContent = computerScore;
 
 };
+
 
 resetBtn.addEventListener('click',()=>{
     msgResult.textContent = message.start;
@@ -128,7 +123,3 @@ resetBtn.addEventListener('click',()=>{
     playBtn.style.display = 'block';
     resetBtn.style.display = 'none';
 });
-
-
-
-
